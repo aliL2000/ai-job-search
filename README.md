@@ -78,6 +78,15 @@ gh repo fork MadsLorentzen/ai-job-search --clone
 cd ai-job-search
 ```
 
+> [!IMPORTANT]
+> **A fork of this repo is always public** — GitHub does not allow private forks of
+> public repositories — and `/setup` (step 3 below) writes your personal data (name,
+> contact details, employment history, salary expectations) into **tracked** files.
+> If this copy is for your own job search rather than for contributing changes back,
+> use a **private repository** with this repo as `upstream` instead — the two-minute
+> recipe is in [SETUP.md section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork),
+> and every update workflow works identically. Fork only to contribute.
+
 ### 2. Install job search tools
 
 PowerShell:
@@ -340,7 +349,7 @@ To wipe your profile data and start fresh:
 
 ### Staying up to date
 
-Upstream moves fast. Rather than pulling raw `master` and hoping, update your fork to a tagged [release](../../releases) - a vetted checkpoint described in [CHANGELOG.md](CHANGELOG.md). `python3 tools/check_upstream_updates.py` previews exactly which of your personalized files an update touches before you merge. Full walkthrough in [SETUP.md, section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork).
+Upstream moves fast. Rather than pulling raw `master` and hoping, update your fork to a tagged [release](../../releases) - a vetted checkpoint described in [CHANGELOG.md](CHANGELOG.md). `python3 tools/check_upstream_updates.py` previews exactly which of your personalized files an update touches before you merge, and `python3 tools/upstream_triage.py` sorts the commits you're behind into "worth reviewing" vs "probably skip" (a weekly workflow can post this to a rolling issue). Full walkthrough in [SETUP.md, section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork).
 
 ## Tips for better results
 
